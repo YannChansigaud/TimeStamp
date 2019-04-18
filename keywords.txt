@@ -1,0 +1,18 @@
+###########################################
+# Syntax Coloring Map For TimeStamp
+###########################################
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+TimeStamp   KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+getTimeFromLastCheck    KEYWORD2
+getTimeFromBeginning    KEYWORD2
+compare KEYWORD2
+getNbLoop   KEYWORD2
