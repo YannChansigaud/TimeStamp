@@ -4,11 +4,11 @@ Utile pour déclencher une ou des opération(s) à intervalle régulier (AutoLoo
 
 Cette classe n'est pas bloquante
 
-set() permet de définir la période ou le délai d'attente
-ack() permet de savoir si le délai est arrivé à terme
-vars() permet de définir les variables d'état et de temps hors de la classe
-restart() permet de remettre le compteur à zéro
-setmode() permet de définir le fonctionnement
+set() permet de définir la période ou le délai d'attente.
+ack() permet de savoir si le délai est arrivé à terme.
+vars() permet de définir les variables d'état et de temps hors de la classe.
+restart() permet de remettre le compteur à zéro.
+setmode() permet de définir le fonctionnement.
 - AutoLoop : Fonctionne comme un métronome. ack()
   retourne vrai quand le temps sera révolu au moment de l'appel mais retournera faux dès l'appel suivant.
   Pour déclencher plusieurs éléments à des points distincts de l'exécution, utiliser des variables externes.
