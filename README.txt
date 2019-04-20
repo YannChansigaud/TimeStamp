@@ -1,17 +1,9 @@
-Librairie permettant de comparer une notion de temps au delà de la limitation de millis() sur Arduino
-Cette librairie se comporte comme un métronome ou un minuteur.
-Utile pour déclencher une ou des opération(s) à intervalle régulier (AutoLoop) comme l'actualisation d'une valeur sur un LCD ou pour déclencher une seule fois une opération à un instant donné sans pour autant bloquer l'exécution du reste du code
+Librairie permettant de compter et de comparer une notion de temps au delà de la limitation de millis() sur Arduino
+- getTimeFromLastCheck() fonction permettant de récupérer le temps écoulé depuis le dernier appel de cette fonction
+- getTimeFromBeginning() fonction permettant de récupérer le temps écoulé depuis le démarrage du microcontroleur
+- compare() fonction permettant de comparer une notion de temps au temps stocké
+- getNbLoop() fonction permettant de connaitre le nombre de fois où millis() a rebouclé à zéro
+- split() fonction permettant de récupérer une valeur exprimée en milliseconde sous forme A-J-H-M-S-MS
+- compute() fonction d'actualisation des valeurs.
 
-Cette classe n'est pas bloquante
-
-set() permet de définir la période ou le délai d'attente.
-ack() permet de savoir si le délai est arrivé à terme.
-vars() permet de définir les variables d'état et de temps hors de la classe.
-restart() permet de remettre le compteur à zéro.
-setmode() permet de définir le fonctionnement.
-- AutoLoop : Fonctionne comme un métronome. ack()
-  retourne vrai quand le temps sera révolu au moment de l'appel mais retournera faux dès l'appel suivant.
-  Pour déclencher plusieurs éléments à des points distincts de l'exécution, utiliser des variables externes.
-- TimeOut : Fonctionne comme un minuteur ack()
-  retourne vrai quand le temps sera révolu au moment de l'appel ainsi qu'à chaque appel suivant
-
+ATTENTION : la méthode compute() doit être appelée au moins 1 fois par millis() soit au moins 1 fois tout les 49 jours environ
